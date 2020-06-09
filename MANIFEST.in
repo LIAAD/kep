@@ -1,0 +1,5 @@
+include requirements.txt
+include kep/StopwordsList/*.txt
+include kep/tests/*
+include kep/stems/*
+include kep/stems/files/*
