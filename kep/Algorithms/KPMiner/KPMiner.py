@@ -9,7 +9,7 @@ class KPMiner(object):
         self.__dataset_name= dataset_name
         self.__normalization = normalization
         self.__pathData = pathData
-        self.__pathToDFFile = self.__pathData + "/Models/Unsupervised/dfs/" + self.__dataset_name + '_dfs.gz'
+        self.__pathToDFFile = self.__pathData + "/Models/dfs/" + self.__dataset_name + '_dfs.gz'
         self.__pathToDatasetName = self.__pathData + "/Datasets/" + self.__dataset_name
         self.__keywordsPath = self.__pathData + '/Keyphrases/KPMiner/' + self.__dataset_name
         self.__algorithmName = "KPMiner"

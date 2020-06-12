@@ -90,9 +90,9 @@ class KEA(object):
 
         # Training the Model
         self.__pathToCollectionOfDocs = self.__pathData + "/Datasets/" + self.__dataset_name + "/docsutf8"
-        self.__pathToDFFile = self.__pathData + "/Models/Supervised/dfs/" + self.__dataset_name + "/df.tsv.gz"
-        self.__pathToKEAFile = self.__pathData + "/Models/Supervised/" + self.__algorithmName + "/" + self.__dataset_name + '/model.pickle'
-        self.__pathToKeaModelsFolder = self.__pathData + "/Models/Supervised/" + self.__algorithmName + "/" + self.__dataset_name
+        self.__pathToDFFile = self.__pathData + "/Models/dfs/" + self.__dataset_name + '_dfs.gz'
+        self.__pathToKEAFile = self.__pathData + "/Models/Supervised/" + self.__algorithmName + "/" + self.__dataset_name + '_model.pickle'
+        self.__pathToKeaModelsFolder = self.__pathData + "/Models/Supervised/" + self.__algorithmName + "/"
 
         self.TrainingKEAModel(self.__pathToCollectionOfDocs, groundTruthFile, self.__lan, self.__normalization,
                               self.__pathToDFFile, self.__pathToKEAFile, self.__pathToKeaModelsFolder)
