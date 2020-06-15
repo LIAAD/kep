@@ -34,12 +34,9 @@ doc = 'art_and_culture-20893614.txt'
 #doc = '2000_10_09-13_00_00-JornaldaTarde-8-topic-seg.txt-Nr1.txt'
 
 #Please replace the following path by your own path, where data is the folder where the datasets may be found.
-pathData = 'H:/Backup/Research/Programming/JupyterNotebooks/Python/APIs_Packages/kep/data'
+pathData = 'SPECIFY PATH FOR DATA FOLDER'
 
 docPath = pathData + f'/Datasets/{dataset_name}/docsutf8/{doc}'
-
-# For training KEA
-nFolds = 5 #Num of folds
 
 #ListOfAlgorithms = ['RAKE', 'YAKE', 'MultiPartiteRank', 'TopicalPageRank', 'TopicRank', 'SingleRank', 'TextRank', 'KPMiner', 'TFIDF', 'KEA']
 ListOfAlgorithms = ['YAKE']

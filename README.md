@@ -1,6 +1,6 @@
 # KEP - Keyphrase Extraction Package
 
-KEP is a Python package that enables to extract keyphrases from documents (single or multiple documents) by applying a number of algorithms, the big majority of which provided by [pke](http://www.aclweb.org/anthology/C16-2015) an [open-source package](https://github.com/boudinfl/pke). Differently from PKE, we provide a ready to run code to extract keyphrases not only from a single document, but also in batch mode (i.e., several documents). More to the point, we consider 20 state-of-the-art datasets from which keyphrases may be extracted, and the corresponding  dfs and lda pre-computed models (which constrasts with pke as only semeval-2010 models are made available).
+KEP is a Python package that enables to extract keyphrases from documents (single or multiple documents) by applying a number of algorithms, the big majority of which provided by [pke](http://www.aclweb.org/anthology/C16-2015) an [open-source package](https://github.com/boudinfl/pke). Differently from PKE, we provide a ready to run code to extract keyphrases not only from a single document, but also in batch mode (i.e., several documents). More to the point, we consider 20 state-of-the-art datasets from which keyphrases may be extracted, and the corresponding  dfs, lda and KEA pre-computed models (which contrasts with pke as only semeval-2010 models are made available).
 
 KEP is available on Dockerhub (ready to run) or available for download (in which case, some configurations need to be done). Regardless your option, we provide a jupyter notebook to ease the process of extracting keyphrases. More on this on the Installation section.
 
@@ -139,6 +139,7 @@ docker exec -it <docker_container_name> jupyter notebook list
 pip install git+https://github.com/liaad/kep
 pip install git+https://github.com/boudinfl/pke
 pip install git+https://github.com/LIAAD/yake.git
+pip install langcodes
 ```
 <br>
 
@@ -235,7 +236,7 @@ Create a folder named 'data' at the same level of the notebook with the followin
 
 * Datasets: folder where the datasets should go in. You may already find 20 datasets ready to download <a href="https://github.com/LIAAD/KeywordExtractor-Datasets" target="_blank">here</a>. Each dataset should be unzipped to this folder. For instance if you want to play with the Inspec dataset you should end up with the following structure: data\Datasets\Inspec
 * Keyphrases: folder where the keyphrases are to be written by the system. For instance, if later on you decide to run YAKE! keyword extraction algorithm on top of the Inspec collection, you will end up with the following structure: data\Keyphrases\YAKE\Inspec. In any case, it is not mandatory to manually create 'Keyphrases' folder as this will be automatically created by the system in case it doesn't exists.
-* Models: Some unsupervised algorithms (such as TopicalPageRank, TF.IDF, KPMiner, etc) require a number of models in order to run (e.g., document frequency models, LDA). The same happens with KEA supervised algorithm. To speed up the process we make them available <a href="http://www.ccc.ipt.pt/~ricardo/kep/standalone/data.zip" target="_blank">here</a> for download. Once downloaded put them data\Models folder. In case you decide not to download them, the system will automatically create the 'Models' folder and the corresponding models will be put inside. Note however, that this will take you much time, thus downloading them in advance is a better option. 
+* Models: Some unsupervised algorithms (such as  TF.IDF, KPMiner, TopicalPageRank and KEA) require a number of models in order to run. To speed up this process we make them available <a href="http://www.ccc.ipt.pt/~ricardo/kep/standalone/data.zip" target="_blank">here</a> for download. Once downloaded put them under the data\Models folder. In case you decide not to download them, the system will automatically create the 'Models' folder and the corresponding models will be saved in the folder. Note however, that this will take you much time, thus downloading them in advance is a better option. 
 
 #### RUN
 ##### Run Jupyter notebooks
@@ -246,4 +247,3 @@ We suggest you to proceed by running the notebook that we have prepared for you 
 Alternatively you can resort to the files we provide under the kep/tests folder of the kep package.
 - ExtractKeyphrases_From_SingleDoc.py: enables to extract keyphrases from a single doc.
 - ExtractKeyphrases_From_MultipleDocs.py: enables to extract keyphrases from multiple docs.
-- Running_Evaluation.py: enables to run the evaluation.

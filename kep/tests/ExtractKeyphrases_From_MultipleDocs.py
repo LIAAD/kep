@@ -16,9 +16,6 @@ normalization = None  # Other options: "stemming" (porter) and "lemmatization"
 # Num of Keyphrases do Retrieve
 numOfKeyphrases = 20
 
-# Num of folds for training KEA
-nFolds = 5
-
 # List of Datasets
 
 #Uncomment if you want to extract keyphrases for all the datasets
@@ -29,8 +26,8 @@ ListOfDatasets = ['110-PT-BN-KP', '500N-KPCrowd-v1.1', 'citeulike180',
                   'SemEval2017', 'theses100', 'wiki20', 'www', 'cacic', 'wicc', 'WikiNews']
 '''
 
-#ListOfDatasets = ['500N-KPCrowd-v1.1']
-ListOfDatasets = ['Krapivin2009']
+
+ListOfDatasets = ['500N-KPCrowd-v1.1']
 
 #Uncomment if you want to extract keyphrases for all the algorithms
 
@@ -42,7 +39,7 @@ ListOfAlgorithms = ['RAKE', 'YAKE', 'MultiPartiteRank', 'TopicalPageRank', 'Topi
 ListOfAlgorithms = ['YAKE']
 
 #Please replace the following path by your own path, where data is the folder where the datasets may be found.
-pathData = 'H:/Backup/Research/Programming/JupyterNotebooks/Python/APIs_Packages/kep/data'
+pathData = 'SPECIFY PATH FOR DATA FOLDER'
 
 for algorithm in ListOfAlgorithms:
     print("\n")
