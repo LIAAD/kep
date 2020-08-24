@@ -240,7 +240,7 @@ Create a folder named 'data' at the same level of the notebook with the followin
 
 #### RUN
 ##### Run Jupyter notebooks
-We suggest you to proceed by running the notebook that we have prepared for you <a href="http://www.ccc.ipt.pt/~ricardo/kep/kep.html" target="_blank">here</a>. 
+In the practical part of the course we will run the following python notebook. If you followed a standalone installation please proceed by downloading it <a href="http://www.ccc.ipt.pt/~ricardo/kep/kep.html" target="_blank">here</a> to have everything setup. Instead you don't need to worry with this should you followed a Docker installation.
 <br>
 
 ##### Run Code
